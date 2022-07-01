@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import getGifs from "./services/getGifs";
 
-function App() {
+export default function App() {
+  const [gifs, setGifs] = useState([]);
+
+  useEffect(function () {
+    getGifs({ keyword: "chess" }).then((gifs) =>
+      setGifs(gifs)
+    );
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {gifs.map((gif) => (
+        <img key={gif} src={gif} alt="" />
+      ))}
     </div>
   );
 }
 
-export default App;
+//* Minuto 46:00 Extrayendo lógica
