@@ -1,6 +1,9 @@
 .gif {
     width: 100%;
     max-width: 360px;
+}
+
+.gif-link {
     text-decoration: none;
     color: white
 }
@@ -16,7 +19,6 @@
 
 .gif-img {
     width: 100%;
-    margin-inline: auto;
     display: block;
     aspect-ratio: 16/9;
     object-fit: cover;
