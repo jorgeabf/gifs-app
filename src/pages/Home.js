@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto">
-      <h1>Jordi Gifs App</h1>
+      <h1>JorgeAbf Gifs App</h1>
       <form className="form mb-4" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -33,7 +33,7 @@ export default function Home() {
         ></input>
       </form>
       <hr />
-      <h2>Última búsqueda:</h2>
+      <h2>Últimas búsquedas:</h2>
       <ListOfGifs gifs={gifs} />
       <h2>Los Gifs más populares:</h2>
       <ul>
