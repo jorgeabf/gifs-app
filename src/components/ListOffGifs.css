@@ -1,7 +1,24 @@
 .listOfGifs {
     margin-inline: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+    columns: 1;
+    column-gap: .1em;
+}
+
+
+@media (min-width: 768px) {
+    .listOfGifs {
+        columns: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .listOfGifs {
+        columns: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .listOfGifs {
+        columns: 4;
+    }
 }

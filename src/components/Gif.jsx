@@ -9,7 +9,12 @@ export default function Gif({
   return (
     <div className="gif">
       <Link to={`/gif/${id}`} className="gif-link">
-        <img src={url} alt={title} className="gif-img" />
+        <img
+          src={url}
+          alt={title}
+          className="gif-img"
+          loading="lazy"
+        />
         <h3 className="gif-title">{title}</h3>
       </Link>
     </div>

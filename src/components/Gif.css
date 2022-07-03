@@ -1,6 +1,5 @@
 .gif {
     width: 100%;
-    max-width: 360px;
 }
 
 .gif-link {
@@ -13,6 +12,7 @@
     padding: 1em;
     text-transform: capitalize;
     text-align: left;
+    font-size: .9rem;
     font-weight: normal;
     background-color: hsl(220, 10%, 10%);
 }
@@ -20,6 +20,4 @@
 .gif-img {
     width: 100%;
     display: block;
-    aspect-ratio: 16/9;
-    object-fit: cover;
 }
