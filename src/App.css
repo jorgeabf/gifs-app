@@ -1,5 +1,5 @@
 .app-container {
-    max-width: 1600px;
+    max-width: 1500px;
     margin-inline: auto;
     padding: 2em 1em;
     display: flex;
@@ -13,5 +13,12 @@
 }
 
 a {
-    color: hsl(240, 100%, 80%)
+    color: hsl(240, 100%, 90%);
+    text-decoration: none;
+    display: block;
+    padding: .25em;
+}
+
+a:hover {
+    text-decoration: underline;
 }

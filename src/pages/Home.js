@@ -21,9 +21,9 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="mx-auto">
       <h1>Jordi Gifs App</h1>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form mb-4" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Buscar un GIF"
@@ -32,9 +32,10 @@ export default function Home() {
           onChange={handleChange}
         ></input>
       </form>
-      <h2>Última búsqueda</h2>
+      <hr />
+      <h2>Última búsqueda:</h2>
       <ListOfGifs gifs={gifs} />
-      <h2>Los Gifs más populares</h2>
+      <h2>Los Gifs más populares:</h2>
       <ul>
         {POPULAR_GIFS.map((popularGif) => (
           <li key={popularGif}>

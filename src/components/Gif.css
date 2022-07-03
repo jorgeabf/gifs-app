@@ -11,10 +11,10 @@
 .gif-title {
     margin: 0;
     padding: 1em;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: .8rem;
-    background-color: hsl(220, 13%, 28%);
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: normal;
+    background-color: hsl(220, 10%, 10%);
 }
 
 .gif-img {
