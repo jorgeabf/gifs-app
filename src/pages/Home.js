@@ -5,9 +5,9 @@ import { useGifs } from "../hooks/useGifs";
 
 const POPULAR_GIFS = [
   "Ajedrez",
-  "Homer",
-  "Rick",
-  "Star Wars",
+  "Chess.com",
+  "Carlsen",
+  "Nakamura",
 ];
 
 export default function Home() {
