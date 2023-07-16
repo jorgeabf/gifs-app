@@ -1,40 +1,42 @@
-import { Link, useLocation } from "wouter";
-import { useState } from "react";
-import ListOfGifs from "../components/ListOfGifs";
-import { useGifs } from "../hooks/useGifs";
+import { Link, useLocation } from 'wouter'
+import { useState } from 'react'
+import ListOfGifs from '../components/ListOfGifs'
+import { useGifs } from '../hooks/useGifs'
 
 const POPULAR_GIFS = [
-  "Ajedrez",
-  "Chess.com",
-  "Carlsen",
-  "Nakamura",
-];
+  'Animales',
+  'Gatos',
+  'Perros',
+  'Elefantes',
+  'Jirafas'
+]
 
 export default function Home() {
-  const [keyword, setKeyword] = useState("");
-  const [path, pushLocation] = useLocation();
-  const { loading, gifs } = useGifs();
+  const [keyword, setKeyword] = useState('')
+  const [path, pushLocation] = useLocation()
+  const { loading, gifs } = useGifs()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    pushLocation(`/search/${keyword}`);
-  };
+    e.preventDefault()
+    pushLocation(`/search/${keyword}`)
+  }
 
   const handleChange = (e) => {
-    setKeyword(e.target.value);
-  };
+    setKeyword(e.target.value)
+  }
 
   return (
-    <div className="mx-auto">
+    <div className='mx-auto'>
       <h1>JorgeAbf Gifs App</h1>
-      <form className="form mb-4" onSubmit={handleSubmit}>
+      <form
+        className='form mb-4'
+        onSubmit={handleSubmit}>
         <input
-          type="text"
-          placeholder="Buscar un GIF"
-          className="form-input"
+          type='text'
+          placeholder='Buscar un GIF'
+          className='form-input'
           value={keyword}
-          onChange={handleChange}
-        ></input>
+          onChange={handleChange}></input>
       </form>
       <hr />
       <h2>Últimas búsquedas:</h2>
@@ -50,5 +52,5 @@ export default function Home() {
         ))}
       </ul>
     </div>
-  );
+  )
 }
